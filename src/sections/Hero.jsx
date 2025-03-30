@@ -5,6 +5,10 @@ import HackerRoom from "../components/HackerRoom.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import {useMediaQuery} from "react-responsive";
 import {calculateSizes} from "../constants/index.js";
+import Target from "../components/Target.jsx";
+import ReactLogo from "../components/ReactLogo.jsx";
+import Cube from "../components/Cube.jsx";
+import Rings from "../components/Rings.jsx";
 
 const Hero = () => {
 
@@ -32,6 +36,12 @@ const Hero = () => {
                             scale={sizes.deskScale}
                             rotation={[0, -Math.PI, 0]}
                         />
+                        <group>
+                            <Target position={sizes.targetPosition}/>
+                            <ReactLogo position={sizes.reactLogoPosition}/>
+                            <Rings position={sizes.ringPosition}/>
+                            <Cube position={sizes.cubePosition}/>
+                        </group>
 
                         <ambientLight intensity={1}/>
                         <directionalLight position={[10, 10, 10]} intensity={0.5}/>
@@ -40,5 +50,6 @@ const Hero = () => {
             </div>
         </section>
     )
+
 }
 export default Hero
