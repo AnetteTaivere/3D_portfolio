@@ -18,7 +18,7 @@ const NavItems = () => {
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
+    const toggleMenu = () => {setIsOpen((prevIsOpen) => !prevIsOpen)};
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
