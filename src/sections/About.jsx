@@ -1,6 +1,6 @@
 import React from 'react'
 import Globe from "react-globe.gl";
-import Button from "./Button.jsx";
+import Button from "../components/Button.jsx";
 
 const About = () => {
     const [hasCopied, setHasCopied] = React.useState(false);
