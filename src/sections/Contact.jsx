@@ -12,17 +12,39 @@ const Contact = () => {
     });
 
     const handleChange = ({target: {name, value}}) => {
-        setForm({ ...form, [name]: value });
+        setForm({...form, [name]: value});
     }
 
     //
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
         setLoading(true);
+        try {
+            await emailjs.send(
+                'service_dlvzbfn',
+                'template_ivpysip',
+                {
+                    from_name: form.name,
+                    to_name: 'Anette',
+                    from_email: form.email,
+                    to_email: 'taivereanette@gmail.com',
+                    message: form.message
+                },
+                'LMN0LWEjW75vIQq5F')
 
-        emailjs.send('service_dlvzbfn', )
+            setLoading(false);
+            alert('Your message has been sent.');
+            setForm({
+                name: '',
+                email: '',
+                message: '',
+            })
+        } catch (error) {
+            setLoading(false);
+            console.log(error);
+            alert('Something went wrong.');
+        }
     }
 
     return (
@@ -93,7 +115,7 @@ const Contact = () => {
                                 disabled={loading}>
                             {loading ? 'Sending...' : 'Send Message'}
                             <img src="/assets/arrow-up.png" alt="arrow-up"
-                            className="field-btn_arrow"/>
+                                 className="field-btn_arrow"/>
 
                         </button>
 
