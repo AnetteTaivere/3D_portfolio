@@ -1,5 +1,5 @@
 import { Leva } from 'leva';
-import { Suspense } from 'react';
+import {Suspense} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { PerspectiveCamera } from '@react-three/drei';
@@ -31,7 +31,7 @@ const Hero = () => {
             </div>
 
             <div className="w-full h-full absolute inset-0">
-                <Canvas className="w-full h-full">
+                <Canvas >
                     <Suspense fallback={<CanvasLoader />}>
                         {/* To hide controller */}
                         <Leva hidden />

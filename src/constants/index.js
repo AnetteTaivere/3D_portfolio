@@ -260,7 +260,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
     {
         id: 1,
-        name: 'Cybernetica',
+        name: 'CYBERNETICA',
         pos: 'Junior developer (main)',
         duration: '12.2024 - Present',
         title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
@@ -269,7 +269,7 @@ export const workExperiences = [
     },
     {
         id: 2,
-        name: 'Cybernetica',
+        name: 'CYBERNETICA',
         pos: 'QA Engineer (side)',
         duration: '04.2025 - Present',
         title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
@@ -278,11 +278,11 @@ export const workExperiences = [
     },
     {
         id: 3,
-        name: 'Cybernetica',
+        name: 'CYBERNETICA',
         pos: 'Junior QA Engineer',
         duration: '06.2023 - 04.2025',
         title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-        icon: '/assets/notion.svg',
+        icon: '/assets/cyber.svg',
         animation: 'salute',
     },
 ];
