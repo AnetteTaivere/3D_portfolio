@@ -5,14 +5,16 @@ import Button from "../components/Button.jsx";
 const About = () => {
     const [hasCopied, setHasCopied] = React.useState(false);
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(
-            'taivereanette@gmail.com',
-        );
-        setHasCopied(true);
-        setTimeout(() => {
-            setHasCopied(false);
-        }, 2000)
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText('taivereanette@gmail.com');
+            setHasCopied(true);
+            setTimeout(() => {
+                setHasCopied(false);
+            }, 2000);
+        } catch (error) {
+            console.error('Failed to copy text: ', error);
+        }
     }
 
     return (
@@ -22,7 +24,7 @@ const About = () => {
             h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid1.png" alt="grid-1"
+                        <img src="/assets/me.png" alt="grid-1"
                              className="w-full sm:h-[276px] h-fit
                         object-contain"/>
                         <div>
@@ -30,7 +32,7 @@ const About = () => {
                                 Hi, I'm Anette
                             </p>
                             <p className="grid-subtext">
-                                I’m a frontend developer with a background
+                                I’m a Frontend Developer with a background
                                 in QA testing, passionate about building clean,
                                 responsive, and user-friendly interfaces.
                                 My attention to detail helps me create seamless
@@ -41,22 +43,26 @@ const About = () => {
                 </div>
 
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="/assets/grid2.png" alt="grid-2"
-                             className="w-full sm:w-[276px] h-fit object-contain"/>
-
-                        <div>
-                            <p className="grid-headtext"> Tech Stack</p>
-                            <p className="grid-subtext"> I specialize in React, focusing on
-                                building interactive and scalable user interfaces. </p>
+                    <div className="grid-container flex flex-col h-full">
+                        <div className="flex-1 flex justify-center items-center">
+                            <img
+                                src="/assets/react.svg"
+                                alt="React Logo"
+                                className="max-w-[200px] w-full h-auto object-contain"
+                            />
+                        </div>
+                        <div className="mt-4">
+                            <p className="grid-headtext">Tech Stack</p>
+                            <p className="grid-subtext">
+                                I specialize in React, focusing on building interactive and scalable user interfaces.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div className="col-span-1 xl:row-span-4">
-                    <div className="grid-container">
-                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex
-                        justify-center items-center">
+                <div className="col-span-1 xl:row-span-3">
+                    <div className="grid-container flex flex-col h-full">
+                        <div className="rflex-1 flex justify-center items-center">
                             <Globe
                                 height={326}
                                 width={326}
@@ -68,38 +74,17 @@ const About = () => {
                                 bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
                             />
                         </div>
-                        <div>
-                            <p className="grid-headtext">
-                                I work remotely across most timezones.
-                            </p>
-                            <p className="grid-subtext">
-                                I'm based in Estonia, with remote work available.
-                            </p>
-                            <Button name="Contact Me" isBeam
-                                    containerClass="w-full mt-10"/>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="xl:col-span-2
-                xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="/assets/grid3.png" alt="grid-3"
-                             className="w-full sm:h-[266px] h-fit object-contain"/>
-                        <div>
-                            <p className="grid-headtext">
-                                My passion for Coding
-                            </p>
-                            <p className="grid-subtext">
-                                I love solving problems and building things through code.
-                                For me, coding is more than a career - it is my passion.
-                            </p>
+                        <div className="mt-6 flex flex-col">
+                            <p className="grid-headtext">I work remotely across most timezones.</p>
+                            <p className="grid-subtext">I'm based in Estonia, with remote work available.</p>
+                            <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
                         </div>
                     </div>
                 </div>
 
                 <div className="xl:col-span-1 xl:row-span-2">
-                    <div className="grid-container">
+                    <div className="grid-container flex justify-center items-center">
                         <img
                             src="/assets/grid4.png"
                             alt="grid-4"

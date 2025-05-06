@@ -26,12 +26,12 @@ const HackerRoom = (props) => {
             <mesh geometry={nodes.table_table_mat_0_3.geometry} material={materials.server_mat}/>
             <mesh geometry={nodes.table_table_mat_0_4.geometry} material={materials.vhsPlayer_mat}/>
             <mesh geometry={nodes.table_table_mat_0_5.geometry} material={materials.stand_mat}/>
-            <mesh geometry={nodes.table_table_mat_0_6.geometry} material={new THREE.MeshStandardMaterial({ color: '#d09cb7' })}/>
+            <mesh geometry={nodes.table_table_mat_0_6.geometry} material={new THREE.MeshStandardMaterial({ color: '#949fea' })}/>
             <mesh geometry={nodes.table_table_mat_0_7.geometry} material={materials.arm_mat}/>
-            <mesh geometry={nodes.table_table_mat_0_8.geometry} material={new THREE.MeshStandardMaterial({ color: '#d09cb7' })}>
+            <mesh geometry={nodes.table_table_mat_0_8.geometry} material={new THREE.MeshStandardMaterial({ color: '#f3d5e5' })}>
                 <meshMatcapMaterial map={monitorTxt}/>
             </mesh>
-            <mesh geometry={nodes.table_table_mat_0_9.geometry} material={new THREE.MeshStandardMaterial({ color: '#d09cb7' })}/>
+            <mesh geometry={nodes.table_table_mat_0_9.geometry} material={new THREE.MeshStandardMaterial({ color: '#f3d5e5' })}/>
             <mesh geometry={nodes.table_table_mat_0_10.geometry} material={materials.props_mat}/>
             <mesh geometry={nodes.table_table_mat_0_11.geometry} material={materials.ground_mat}/>
             <mesh geometry={nodes.table_table_mat_0_12.geometry} material={materials.key_mat}/>

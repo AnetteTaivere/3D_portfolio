@@ -29,7 +29,6 @@ const Cube = ({ ...props }) => {
             });
     });
 
-
     return (
         <Float floatIntensity={2}>
             <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={0.74} dispose={null} {...props}>
@@ -38,7 +37,7 @@ const Cube = ({ ...props }) => {
                     castShadow="true"
                     receiveShadow="true"
                     geometry={nodes.Cube.geometry}
-                    material={nodes.Cube.material}
+                    material={new THREE.MeshStandardMaterial({ color: '#f3d5e5' })}
                     onPointerEnter={() => setHovered(true)}>
                     <meshMatcapMaterial matcap={texture} toneMapped={false} />
                 </mesh>
