@@ -23,7 +23,7 @@ const About = () => {
             xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5
             h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
+                    <div className="grid-container flex flex-col justify-start">
                         <img src="/assets/me.png" alt="grid-1"
                              className="w-full sm:h-[276px] h-fit
                         object-contain"/>
@@ -44,7 +44,6 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container flex flex-col h-full">
-                        <div className="flex-1 flex justify-center items-center">
                             <img
                                 src="/assets/react.svg"
                                 alt="React Logo"
@@ -56,7 +55,6 @@ const About = () => {
                             <p className="grid-subtext">
                                 I specialize in React, focusing on building interactive and scalable user interfaces.
                             </p>
-                        </div>
                     </div>
                 </div>
 
