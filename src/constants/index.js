@@ -231,7 +231,7 @@ export const workExperiences = [
     {
         id: 1,
         name: 'CYBERNETICA',
-        pos: 'Junior Software Engineer',
+        pos: 'Junior Software Developer',
         duration: '04.2025 - Present',
         title: "Developed and enhanced front-end features using TypeScript and React, improving user interaction and experience by addressing bugs and implementing new, user-centric functionality.",
         icon: '/assets/cyber.png',

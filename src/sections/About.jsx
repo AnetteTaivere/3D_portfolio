@@ -1,6 +1,9 @@
 import React from 'react'
 import Globe from "react-globe.gl";
 import Button from "../components/Button.jsx";
+import ReactLogo from "../components/ReactLogo.jsx";
+import {Canvas} from "@react-three/fiber";
+import {PerspectiveCamera} from "@react-three/drei";
 
 const About = () => {
     const [hasCopied, setHasCopied] = React.useState(false);
@@ -24,10 +27,11 @@ const About = () => {
             h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container flex flex-col justify-start">
-                        <img src="/assets/me.png" alt="grid-1"
-                             className="w-full sm:h-[276px] h-fit
-                        object-contain"/>
-                        <div>
+                        <div className="h-[326px] w-full flex items-center justify-center">
+                            <img src="/assets/me.png" alt="grid-1"
+                                 className="w-full h-full object-contain"/>
+                        </div>
+                        <div className="mt-6 w-full text-left">
                             <p className="grid-headtext">
                                 Hi, I'm Anette
                             </p>
@@ -39,22 +43,25 @@ const About = () => {
                                 web experiences.
                             </p>
                         </div>
-                    </div>
-                </div>
-
-                <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container flex flex-col h-full">
-                            <img
-                                src="/assets/react.svg"
-                                alt="React Logo"
-                                className="max-w-[200px] w-full h-auto object-contain"
-                            />
                         </div>
-                        <div className="mt-4">
+                    </div>
+
+                    <div className="col-span-1 xl:row-span-3">
+                    <div className="grid-container flex flex-col justify-start items-center h-full p-4">
+                        <div className="h-[326px] flex items-center justify-center">
+                            <Canvas>
+                                <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
+                                <ambientLight intensity={1}/>
+                                <directionalLight position={[10, 10, 10]} intensity={0.5}/>
+                                <ReactLogo position={[0,0,0]} scale={3.5} spin={true}/>
+                            </Canvas>
+                        </div>
+                        <div className="mt-6 text-left w-full">
                             <p className="grid-headtext">Tech Stack</p>
                             <p className="grid-subtext">
                                 I specialize in React, focusing on building interactive and scalable user interfaces.
                             </p>
+                        </div>
                     </div>
                 </div>
 
