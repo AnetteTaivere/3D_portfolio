@@ -22,7 +22,7 @@ const Contact = () => {
         setLoading(true);
         try {
             await emailjs.send(
-                'service_dlvzbfn',
+                'service_wd5t4lt',
                 'template_ivpysip',
                 {
                     from_name: form.name,
