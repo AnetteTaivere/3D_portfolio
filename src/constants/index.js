@@ -149,7 +149,7 @@ export const workExperiences = [
     {
         id: 2,
         name: 'CYBERNETICA',
-        pos: 'QA Engineer (alongside Developer role)',
+        pos: 'QA Engineer (when needed)',
         duration: '04.2025 - Present',
         title: "Performed manual testing supported by SQL queries and log analysis, using Postman and Curl to test APIs. Developed automation scripts to streamline repetitive tasks.",
         icon: '/assets/cyber.png',

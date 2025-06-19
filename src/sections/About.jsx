@@ -77,7 +77,13 @@ const About = () => {
                                 showGraticules
                                 globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
                                 bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
-                            />
+                                labelsData={[{
+                                    lat: 58, lng: 28, 
+                                    text: "I'm here!",
+                                    color: 'white',
+                                    size: 3,
+                                }]}
+                           />
                         </div>
 
                         <div className="mt-6 flex flex-col">
