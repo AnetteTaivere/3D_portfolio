@@ -8,7 +8,7 @@ const ReactLogo = ({spin = false, ...props}) => {
     const groupRef = useRef();
     useFrame(() => {
         if (spin && groupRef.current) {
-            //console.log('spinning...');
+            console.log('spinning...');
             groupRef.current.rotation.y += 0.01;
             groupRef.current.rotation.x += 0.005;
         }
