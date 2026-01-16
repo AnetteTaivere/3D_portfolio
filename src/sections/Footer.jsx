@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
 
             <p className="text-white-500">
-                © 2025 Anette. All rights reserved.
+                © 2026 Anette. All rights reserved.
             </p>
         </section>
     )

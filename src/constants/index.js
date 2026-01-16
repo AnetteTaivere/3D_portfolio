@@ -29,7 +29,7 @@ export const navLinks = [
 export const myProjects = [
     {
         title: 'Coming soon',
-        desc: 'in 2025...',
+        desc: 'in 2026...',
         subdesc:
             '',
         href: '',
@@ -61,7 +61,7 @@ export const myProjects = [
     },
     {
         title: 'Coming soon',
-        desc: 'in 2025...',
+        desc: 'in 2026...',
         subdesc:
             '',
         href: '',
@@ -93,7 +93,7 @@ export const myProjects = [
     },
     {
         title: 'Coming soon',
-        desc: 'in 2025...',
+        desc: 'in 2026...',
         subdesc:
             '',
         href: '',
